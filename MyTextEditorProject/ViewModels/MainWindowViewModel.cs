@@ -11,6 +11,8 @@ namespace MyTextEditorProject.ViewModels
     {
         #region Properties
 
+        public string Title { get; set; } = "MyTextEditorProject";
+        
         #endregion
 
         #region Commands
