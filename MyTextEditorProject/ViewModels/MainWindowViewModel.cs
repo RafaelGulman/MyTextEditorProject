@@ -12,6 +12,10 @@ namespace MyTextEditorProject.ViewModels
         #region Properties
 
         public string Title { get; set; } = "MyTextEditorProject";
+
+        public string Header { get; set; } = "unnamed";
+
+        public string Text { get; set; } = "Введите ваш текст";
         
         #endregion
 

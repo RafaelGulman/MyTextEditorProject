@@ -10,24 +10,31 @@
     <Window.DataContext>
         <vm:MainWindowViewModel></vm:MainWindowViewModel>
     </Window.DataContext>
-    <Grid ShowGridLines="True">
+    <Grid>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Menu>
-            <MenuItem Header="Menu"></MenuItem>
+            <MenuItem Header="Menu">
+                <MenuItem Header="Close"></MenuItem>
+            </MenuItem>
             <MenuItem Header="File">
                 <MenuItem Header="Open"></MenuItem>
                 <MenuItem Header="Save"></MenuItem>
             </MenuItem>
         </Menu>
         
-        <GridSplitter Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Width="3"></GridSplitter>
+        <GridSplitter Grid.Row="1" HorizontalAlignment="Center" Width="3"></GridSplitter>
 
-        <TextBox Grid.Column="2" Grid.Row="1" Text="Введите ваш первый текст" Margin="5"></TextBox>
+        <TextBox Grid.Row="1" Text="{Binding Text}" Margin="5"></TextBox>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="0, 0, 30, 0">
+            <Button Content="Save" Width="80" Margin="5"></Button>
+        </StackPanel>
         
     </Grid>
 </Window>
