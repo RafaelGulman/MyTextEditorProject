@@ -12,7 +12,7 @@
     </Window.DataContext>
  
     <Grid>
-        <ListView>
+        <ListView ItemsSource="{Binding directories}">
             
         </ListView>
     </Grid>

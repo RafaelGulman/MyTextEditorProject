@@ -24,7 +24,7 @@
             </MenuItem>
             <MenuItem Header="File">
                 <MenuItem Header="Open"></MenuItem>
-                <MenuItem Header="Save"></MenuItem>
+                <MenuItem Header="Save" Command="{Binding OpenExplorer}"></MenuItem>
             </MenuItem>
             <MenuItem Header="Settings">
                 <MenuItem Header="Default save"></MenuItem>

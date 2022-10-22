@@ -9,6 +9,8 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Navigation;
 using System.IO;
+using MyTextEditorProject.Views.Explorer;
+using System.Windows.Media.Animation;
 
 namespace MyTextEditorProject.ViewModels
 {
@@ -67,12 +69,27 @@ namespace MyTextEditorProject.ViewModels
 
         #endregion
 
+        #region OpenExplorer
+
+        public ICommand OpenExplorer { get; }
+
+        protected bool CanOpenExplorerExecuted(object p) => true;
+
+        protected void OnOpenExplorerExecute(object p)
+        {
+            Explorer explorer = new Explorer();
+            
+            explorer.ShowDialog();
+        }
+
+        #endregion
+
         #endregion
 
         public MainWindowViewModel()
         {
             SaveCommand = new LambdaCommand(OnSaveCommandExecute, CanSaveCommandExecuted);
-
+            OpenExplorer = new LambdaCommand(OnOpenExplorerExecute, CanOpenExplorerExecuted);
         }
     }
 }
