@@ -51,7 +51,7 @@ namespace MyTextEditorProject.ViewModels
 
         public ICommand SaveCommand { get; }
 
-        protected bool CanSaveCommandExecuted(object p) => true;
+        protected bool CanSaveCommandExecute(object p) => true;
 
         protected void OnSaveCommandExecute(object p)
         {
@@ -73,7 +73,7 @@ namespace MyTextEditorProject.ViewModels
 
         public ICommand OpenExplorer { get; }
 
-        protected bool CanOpenExplorerExecuted(object p) => true;
+        protected bool CanOpenExplorerExecute(object p) => true;
 
         protected void OnOpenExplorerExecute(object p)
         {
@@ -88,8 +88,8 @@ namespace MyTextEditorProject.ViewModels
 
         public MainWindowViewModel()
         {
-            SaveCommand = new LambdaCommand(OnSaveCommandExecute, CanSaveCommandExecuted);
-            OpenExplorer = new LambdaCommand(OnOpenExplorerExecute, CanOpenExplorerExecuted);
+            SaveCommand = new LambdaCommand(OnSaveCommandExecute, CanSaveCommandExecute);
+            OpenExplorer = new LambdaCommand(OnOpenExplorerExecute, CanOpenExplorerExecute);
         }
     }
 }

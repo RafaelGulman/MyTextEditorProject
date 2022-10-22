@@ -23,7 +23,7 @@
                 <MenuItem Header="Close"></MenuItem>
             </MenuItem>
             <MenuItem Header="File">
-                <MenuItem Header="Open"></MenuItem>
+                <MenuItem Header="Open" Command="{Binding OpenExplorer}"></MenuItem>
                 <MenuItem Header="Save" Command="{Binding OpenExplorer}"></MenuItem>
             </MenuItem>
             <MenuItem Header="Settings">
