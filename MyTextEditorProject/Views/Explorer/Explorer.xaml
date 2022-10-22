@@ -4,9 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyTextEditorProject.Views.Explorer"
+        xmlns:vm="clr-namespace:MyTextEditorProject.ViewModels"
         mc:Ignorable="d"
-        Title="Explorer" Height="450" Width="800">
+        Title="Explorer" Height="550" Width="300">
+    <Window.DataContext>
+        <vm:ExplorerViewModel></vm:ExplorerViewModel>
+    </Window.DataContext>
+ 
     <Grid>
-        
+        <ListView>
+            
+        </ListView>
     </Grid>
 </Window>

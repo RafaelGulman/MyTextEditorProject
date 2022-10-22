@@ -26,6 +26,10 @@
                 <MenuItem Header="Open"></MenuItem>
                 <MenuItem Header="Save"></MenuItem>
             </MenuItem>
+            <MenuItem Header="Settings">
+                <MenuItem Header="Default save"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Info"></MenuItem>
         </Menu>
         
         <GridSplitter Grid.Row="1" HorizontalAlignment="Center" Width="3"></GridSplitter>
